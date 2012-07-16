@@ -17,7 +17,4 @@ public class SimpleController {
 	
 	@RequestMapping(value = "/greeting") @ResponseBody
 	public String greeting() { return "Hello World!"; }
-	
-	@RequestMapping(value = "/favicon") @ResponseBody
-	public String favicon() { return null; }
 }
