@@ -7,11 +7,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
 public class AppInit implements WebApplicationInitializer {
-	
 	@Override
 	public void onStartup(final ServletContext servletCtx) throws ServletException {
 		final AnnotationConfigWebApplicationContext appCtx = new AnnotationConfigWebApplicationContext();
-    appCtx.register(AppConfig.class);
+		appCtx.register(AppConfig.class);
 		servletCtx.addServlet("dispatcher", new DispatcherServlet(appCtx)).addMapping("/*");
 	}
 }
