@@ -12,4 +12,4 @@ appender("STDOUT", ConsoleAppender) {
 
 logger("com.codegoop", DEBUG)
 
-root(INFO, ["STDOUT"])
+root(DEBUG, ["STDOUT"])
